@@ -7,7 +7,7 @@
 
   `cat /etc/issue`
 
-  ![check_version_Ubuntu](/D01_Linux-0/misc/images/check_version_Ubuntu.png)
+  ![check_version_Ubuntu](../misc/images/check_version_Ubuntu.png)
 
   ---
 
@@ -23,7 +23,7 @@
 
   `cat /etc/passwd`
 
-  ![check_user](/D01_Linux-0/misc/images/check_user.png)
+  ![check_user](../misc/images/check_user.png)
 
   ---
 
@@ -35,13 +35,13 @@
 
   `sudo hostname user-1`
 
-  ![add_user](/D01_Linux-0/misc/images/pc_name_change.png)
+  ![add_user](../misc/images/pc_name_change.png)
 
   Проверяем результат командой:
 
   `hostname`
 
-  ![check_user](/D01_Linux-0/misc/images/pc_name.png)
+  ![check_user](../misc/images/pc_name.png)
 
     * Установить временную зону, соответствующую вашему текущему местоположению
 
@@ -57,7 +57,7 @@
 
   `timedatectl`
 
-  ![time_zone](/D01_Linux-0/misc/images/time_zone.png)
+  ![time_zone](../misc/images/time_zone.png)
 
     * Вывести названия сетевых интерфейсов с помощью консольной команды
     * В отчёте дать объяснение наличию интерфейса lo
@@ -66,9 +66,9 @@
 
   `ip link show`
 
-  ![names_of_network_interfaces](/D01_Linux-0/misc/images/names_of_network_interfaces.png)
+  ![names_of_network_interfaces](../misc/images/names_of_network_interfaces.png)
 
-  ![lo_interface](/D01_Linux-0/misc/images/lo_interface.png)
+  ![lo_interface](../misc/images/lo_interface.png)
 
     * Используя консольную команду получить ip адрес устройства, на котором вы работаете, от DHCP сервера
     * В отчёте дать расшифровку DHCP
@@ -77,19 +77,19 @@
     * Перезагрузить виртуальную машину. Убедиться, что статичные сетевые настройки (ip, gw, dns) соответствуют заданным в предыдущем пункте
     * Успешно пропинговать удаленные хосты 1.1.1.1 и ya.ru и вставить в отчёт скрин с выводом команды
 
-  ![dhcp](/D01_Linux-0/misc/images/dhcp.png)
+  ![dhcp](../misc/images/dhcp.png)
 
   Выполняем команду для получения внешнего ip-адреса шлюза:
 
   `ip route`
 
-  ![ip_adres](/D01_Linux-0/misc/images/ip_adres.png)
+  ![ip_adres](../misc/images/ip_adres.png)
 
   Выполняем команду для получения внутреннего ip-адреса шлюза:
 
   `nslookup localhost`
 
-  ![internal_ip_adress](/D01_Linux-0/misc/images/internal_ip_adress.png)
+  ![internal_ip_adress](../misc/images/internal_ip_adress.png)
 
   Задаём статичные (заданные вручную, а не полученные от DHCP сервера) настройки ip, gw, dns и применяем их
 
@@ -97,7 +97,7 @@
 
   `sudo netplan apply`
 
-  ![](/D01_Linux-0/misc/images/static_ip.png)
+  ![](../misc/images/static_ip.png)
 
   Перезагружаем виртуальную машину. Убеждаемся, что статичные сетевые настройки (ip, gw, dns) соответствуют заданным в предыдущем пункте
 
@@ -105,13 +105,13 @@
 
   `ip a`
 
-  ![](/D01_Linux-0/misc/images/check_ip.png)
+  ![](../misc/images/check_ip.png)
 
   Пингуем удаленные хосты 1.1.1.1 и ya.ru
 
-  ![](/D01_Linux-0/misc/images/ping_1.1.1.1.png)
+  ![](../misc/images/ping_1.1.1.1.png)
 
-  ![](/D01_Linux-0/misc/images/ping_ya.ru.png)
+  ![](../misc/images/ping_ya.ru.png)
 
   ---
 
@@ -123,7 +123,7 @@
 
   `sudo apt-get update` или `sudo apt-get upgrade` или `sudo apt-get dist-upgrade`
 
-  ![](/D01_Linux-0/misc/images/upgrade.png)
+  ![](../misc/images/upgrade.png)
 
   ---
 
@@ -140,13 +140,13 @@
 
   `sudo` (англ. Substitute User and do, дословно «подменить пользователя и выполнить») — программа для системного администрирования UNIX-систем, позволяющая делегировать те или иные привилегированные ресурсы пользователям с ведением протокола работы. Основная идея — дать пользователям как можно меньше прав, при этом достаточных для решения поставленных задач. Программа поставляется для большинства UNIX и UNIX-подобных операционных систем
 
-  ![](/D01_Linux-0/misc/images/Sudo_logo.png)
+  ![](../misc/images/Sudo_logo.png)
 
   Bыполняем команду для изменения hostname ОС
 
   `sudo hostnamectl set-hostname` новое_имя
 
-  ![](/D01_Linux-0/misc/images/check_hostname.png)
+  ![](../misc/images/check_hostname.png)
 
   ---
 
@@ -163,7 +163,7 @@
 
   Bыполняем команду `timedatectl show`
 
-  ![](/D01_Linux-0/misc/images/check_time.png)
+  ![](../misc/images/check_time.png)
 
   ---
 
@@ -193,67 +193,67 @@
 
   ## Редактор vim
 
-  ![](/D01_Linux-0/misc/images/alvintha_vim.png)
+  ![](../misc/images/alvintha_vim.png)
 
   для выхода с сохранением изменений: `esc` -> `shift` + `:` -> пишем `wq` -> `enter`
 
   ## Редактор nano
 
-  ![](/D01_Linux-0/misc/images/alvintha_nano.png)
+  ![](../misc/images/alvintha_nano.png)
 
   для выхода с сохранением изменений: `control` + `x` -> `control` + `y` -> `enter`
 
   ## Редактор mcedit
 
-  ![](/D01_Linux-0/misc/images/alvintha_mcedit.png)
+  ![](../misc/images/alvintha_mcedit.png)
 
   для выхода с сохранением изменений: `fn` + `F2` -> `save`->`fn` + `F10`
 
   ## Редактор vim
 
-  ![](/D01_Linux-0/misc/images/change_vim_without_save.png)
+  ![](../misc/images/change_vim_without_save.png)
 
   для выхода без сохранения изменений: `esc` -> `shift` + `:` -> пишем `q!` -> `enter`
 
   ## Редактор nano
 
-  ![](/D01_Linux-0/misc/images/change_nano_without_save.png)
+  ![](../misc/images/change_nano_without_save.png)
 
   для выхода без сохранения изменений: `control` + `x` -> `control` + `n` -> `enter`
 
   ## Редактор mcedit
 
-  ![](/D01_Linux-0/misc/images/change_mcedit_without_save.png)
+  ![](../misc/images/change_mcedit_without_save.png)
 
   для выхода с сохранением изменений: `fn` + `F10`-> `no` -> `enter`
 
   ## Редактор vim
 
-  ![](/D01_Linux-0/misc/images/vim_poisk.png)
+  ![](../misc/images/vim_poisk.png)
 
   для поиска символа(фразы): `esc` -> `/` -> `фраза`
 
-  ![](/D01_Linux-0/misc/images/vim_zamena.png)
+  ![](../misc/images/vim_zamena.png)
 
   для замены символа(фразы): `esc` -> `shift` + `:` -> `s/` -> `фраза которую необходимо заменить` -> `/` -> `фраза на которую меняем`
 
   ## Редактор nano
 
-  ![](/D01_Linux-0/misc/images/nano_poisk.png)
+  ![](../misc/images/nano_poisk.png)
 
   для поиска символа(фразы): `control` + `w`
 
-  ![](/D01_Linux-0/misc/images/nano_zamena.png)
+  ![](../misc/images/nano_zamena.png)
 
   для замены символа(фразы): `control` + `\`
 
   ## Редактор mcedit
 
-  ![](/D01_Linux-0/misc/images/mcedit_poisk.png)
+  ![](../misc/images/mcedit_poisk.png)
 
   для поиска символа(фразы): `fn` + `F7`
 
-  ![](/D01_Linux-0/misc/images/mcedit_zamena.png)
+  ![](../misc/images/mcedit_zamena.png)
 
   для замены символа(фразы): `fn` + `F4`
 
@@ -290,13 +290,13 @@
   `-C` - выбирает процессы по имени команды\
   `-F` - выводит максимум доступных данных
 
-  ![](/D01_Linux-0/misc/images/ps.png)
+  ![](../misc/images/ps.png)
 
    Выполняем команду:
    
    `netstat -tan`
 
-  ![](/D01_Linux-0/misc/images/netstat.png)
+  ![](../misc/images/netstat.png)
 
   `-t` - отображает текущее подключение в состоянии переноса нагрузки с процессора на сетевой адаптер при передаче данных ( "offload" )
 
@@ -338,7 +338,7 @@
 
   Выполняем команду `top`
 
-  ![](/D01_Linux-0/misc/images/top.png)
+  ![](../misc/images/top.png)
 
   uptime  - 32 мин\
   количество авторизованных пользователей - 0\
@@ -352,25 +352,25 @@
   Выполняем команду `htop`
 
   сортировка по PID
-  ![](/D01_Linux-0/misc/images/htop_pid.png)
+  ![](../misc/images/htop_pid.png)
 
   сортировка по PERCENT_CPU
-  ![](/D01_Linux-0/misc/images/htop_percent_cpu.png)
+  ![](../misc/images/htop_percent_cpu.png)
 
   сортировка по PERCENT_MEM
-  ![](/D01_Linux-0/misc/images/htop_percent_mem.png)
+  ![](../misc/images/htop_percent_mem.png)
 
   сортировка по TIME
-  ![](/D01_Linux-0/misc/images/htop_time.png)
+  ![](../misc/images/htop_time.png)
 
   фильтр для процесса sshd
-  ![](/D01_Linux-0/misc/images/htop_sshd.png)
+  ![](../misc/images/htop_sshd.png)
 
   фильтр с процессом syslog
-  ![](/D01_Linux-0/misc/images/htop_syslog.png)
+  ![](../misc/images/htop_syslog.png)
 
   с добавленным выводом hostname, clock и uptime
-  ![](/D01_Linux-0/misc/images/htop_dop_settings.png)
+  ![](../misc/images/htop_dop_settings.png)
 
   ---
 
@@ -379,7 +379,7 @@
     * Запустить команду fdisk -l
     * В отчёте написать название жесткого диска, его размер и количество секторов, а также размер swap
 
-  ![](/D01_Linux-0/misc/images/fdisk.png)
+  ![](../misc/images/fdisk.png)
 
   Название диска - Disk /dev/sda
 
@@ -408,7 +408,7 @@
 
   Выполняем команды `df` и `df -Th`
 
-  ![](/D01_Linux-0/misc/images/df.png)
+  ![](../misc/images/df.png)
 
    команда `df`  
    - размер раздела: 16445308
@@ -432,9 +432,9 @@
     * Вывести размер всего содержимого в /var/log (не общее, а каждого вложенного элемента, используя *)
     * В отчёт вставить скрины с выводом всех использованных команд
 
-  ![](/D01_Linux-0/misc/images/du.png)
+  ![](../misc/images/du.png)
 
-  ![](/D01_Linux-0/misc/images/du_var_log.png)
+  ![](../misc/images/du_var_log.png)
 
   ---
 
@@ -444,11 +444,11 @@
       - Вывести размер папок /home, /var, /var/log
       - В отчёт вставить скрины с выводом использованных команд
 
-  ![](/D01_Linux-0/misc/images/ncdu_home.png)
+  ![](../misc/images/ncdu_home.png)
 
-  ![](/D01_Linux-0/misc/images/ncdu_var.png)
+  ![](../misc/images/ncdu_var.png)
 
-  ![](/D01_Linux-0/misc/images/ncdu_var_log.png)
+  ![](../misc/images/ncdu_var_log.png)
 
   ---
 
@@ -461,13 +461,13 @@
     * Написать в отчёте время последней успешной авторизации, имя пользователя и метод входа в систему
     * Перезапустить службу SSHd
     * Вставить в отчёт скрин с сообщением о рестарте службы (искать в логах)
-  ![](/D01_Linux-0/misc/images/14_log.png)
+  ![](../misc/images/14_log.png)
 
   Перезапускаем службу SSHd
 
   `sudo systemctl restart ssh.service`
 
-  ![](/D01_Linux-0/misc/images/14_ssh_restart.png)
+  ![](../misc/images/14_ssh_restart.png)
 
   ---
 
@@ -488,18 +488,18 @@
 
   `*/2 * * * * uptime > /dev/null 2>&1`
 
-  ![](/D01_Linux-0/misc/images/15_uptime.png)
+  ![](../misc/images/15_uptime.png)
 
   Выполняем команду для вывода на экран списка текущих заданий для CRON
   
   `crontab -l`:
 
-  ![](/D01_Linux-0/misc/images/15_cron_l.png)
+  ![](../misc/images/15_cron_l.png)
 
   Выполняем команду для удаления всех заданий из планировщика CRON
   
   `crontab -r`
 
-  ![](/D01_Linux-0/misc/images/15_cron_r.png)
+  ![](../misc/images/15_cron_r.png)
 
   ---
